@@ -20,6 +20,16 @@
 
             function HomePage() {
                 const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+                
+                // States and Hooks
+                // First item in the array is the state value
+                // Second item in the array is a function to update the value
+                // Use array destructuring to access the array values
+                const [likes, setLikes] = React.useState(0);
+                
+                function handleClick() {
+                    setLikes(likes + 1);
+                }
 
                 return (
                     <div>
@@ -31,6 +41,7 @@
                                 <li key={name}>{name}</li>
                             ))}
                         </ul>
+                        <button onClick={handleClick}>Like({likes})</button>
                     </div>
                 );
             }
