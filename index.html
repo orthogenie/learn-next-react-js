@@ -1,6 +1,20 @@
 <html>
     <body>
         <div id="app"></div>
+
+        <!-- React scripts -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        
+        <!-- Babel script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const domNode = document.getElementById('app');
+            const root = ReactDOM.createRoot(domNode);
+            root.render(<h1>Develop. Preview. Ship.</h1>);
+        </script>
+        
+        <!-- Manual DOM manipulation
         <script type="text/javascript">
             // Select the div element with the 'app' id
             const app = document.getElementById('app');
@@ -17,6 +31,7 @@
 
             // Place the H1 element inside the div
             app.appendChild(header);
-        </script>
+        </script> 
+        -->
     </body>
 </html>
